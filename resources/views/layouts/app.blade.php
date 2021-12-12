@@ -21,7 +21,8 @@
 <body>
 
     @include('components.navbar')
-
+    {{-- @include('layouts.navigation') --}}
+    
     @yield('content')
 
     <!-- Optional JavaScript; choose one of the two! -->
