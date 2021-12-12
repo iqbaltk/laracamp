@@ -26,15 +26,17 @@
                 <div class="d-flex user-logged nav-item dropdown no-arrow">
                     <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
                         Halo, {{ Auth::user()->name }}
-                        <img src="{{ Auth::user()->avatar }}" class="user-photo" alt="" style="border-radius: 150px; width:auto">
+                        <img src="{{ Auth::user()->avatar }}" class="user-photo" alt=""
+                            style="border-radius: 150px; width:auto">
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu" style="right: 0; left:auto;">
                             <li>
-                                <a href="#" class="dropdown-item">My Dashboard</a>
+                                <a href="{{route('dashboard')}}" class="dropdown-item">My Dashboard</a>
                             </li>
                             <li><a href="#" class="dropdown-item"
                                     onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Sign
                                     Out</a>
-                                <form action="{{ route('logout') }}" id="logout-form" method="post" style="display: none;">
+                                <form action="{{ route('logout') }}" id="logout-form" method="post"
+                                    style="display: none;">
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 </form>
                             </li>
