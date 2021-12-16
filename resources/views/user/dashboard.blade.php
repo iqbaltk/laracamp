@@ -41,7 +41,8 @@
                                     @endif
                                 </td>
                                 <td>
-                                    <a href="https://wa.me/083820515430?text=Hi, Saya ingin bertanya tentang kelas {{$checkout->Camp->title}}" class="btn btn-primary" target="_blank">
+                                    <a href="https://wa.me/083820515430?text=Hi, Saya ingin bertanya tentang kelas {{ $checkout->Camp->title }}"
+                                        class="btn btn-primary" target="_blank">
                                         Contact Support
                                     </a>
                                 </td>
@@ -49,7 +50,10 @@
                         @empty
                             <tr>
                                 <td colspan="5">
-                                    <h3>No Data</h3>
+                                    <center>
+                                        <h4>No Data</h4>
+                                    </center>
+                                    <hr>
                                 </td>
                             </tr>
                         @endforelse
